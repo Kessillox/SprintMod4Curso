@@ -1,0 +1,362 @@
+Index: src/entity/Usuario.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package entity;public class Usuario {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/Usuario.java b/src/entity/Usuario.java
+--- a/src/entity/Usuario.java	(revision 1e6d11f1abe76a2b9a88fd16e4950a8d8490216d)
++++ b/src/entity/Usuario.java	(date 1689640208770)
+@@ -1,2 +1,117 @@
+-package entity;public class Usuario {
++package entity;
++
++import interfaces.IUsuario;
++
++import java.time.LocalDate;
++
++public class Usuario implements IUsuario {
++    private int idUsuario;
++    private String nombre;
++    private String apellido1;
++    private String apellido2;
++    private LocalDate fechaNacimiento;
++    private int run;
++    private int tipoUsuario;
++
++    public Usuario() {
++    }
++
++    public Usuario(int idUsuario, String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario) {
++        this.idUsuario = idUsuario;
++        this.nombre = nombre;
++        this.apellido1 = apellido1;
++        this.apellido2 = apellido2;
++        this.fechaNacimiento = fechaNacimiento;
++        this.run = run;
++        this.tipoUsuario = tipoUsuario;
++    }
++
++    public int getIdUsuario() {
++        return idUsuario;
++    }
++
++    public void setIdUsuario(int idUsuario) {
++        this.idUsuario = idUsuario;
++    }
++
++    public String getNombre() {
++        return nombre;
++    }
++
++    public void setNombre(String nombre) {
++        this.nombre = nombre;
++    }
++
++    public String getApellido1() {
++        return apellido1;
++    }
++
++    public void setApellido1(String apellido1) {
++        this.apellido1 = apellido1;
++    }
++
++    public String getApellido2() {
++        return apellido2;
++    }
++
++    public void setApellido2(String apellido2) {
++        this.apellido2 = apellido2;
++    }
++
++    public LocalDate getFechaNacimiento() {
++        return fechaNacimiento;
++    }
++
++    public void setFechaNacimiento(LocalDate fechaNacimiento) {
++        this.fechaNacimiento = fechaNacimiento;
++    }
++
++    public int getRun() {
++        return run;
++    }
++
++    public void setRun(int run) {
++        this.run = run;
++    }
++
++    public int getTipoUsuario() {
++        return tipoUsuario;
++    }
++
++    public void setTipoUsuario(int tipoUsuario) {
++        this.tipoUsuario = tipoUsuario;
++    }
++
++    @Override
++    public String toString() {
++        return "Usuario{" +
++                "idUsuario=" + idUsuario +
++                ", nombre='" + nombre + '\'' +
++                ", apellido1='" + apellido1 + '\'' +
++                ", apellido2='" + apellido2 + '\'' +
++                ", fechaNacimiento=" + fechaNacimiento +
++                ", run=" + run +
++                ", tipoUsuario=" + tipoUsuario +
++                '}';
++    }
++
++    public void mostrarEdad(){
++
++    }
++
++    @Override
++    public String analizarUsuario() {
++
++        return "Hola soy "
++                +getNombre()+
++                " "
++                +getApellido1()
++                +" "
++                +getApellido2()
++                +" Nací el "
++                +getFechaNacimiento()
++                +" mi run es "
++                +getRun()+
++                " ";
++    }
+ }
+Index: src/entity/Administrativo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package entity;public class Administrativo {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/Administrativo.java b/src/entity/Administrativo.java
+--- a/src/entity/Administrativo.java	(revision 1e6d11f1abe76a2b9a88fd16e4950a8d8490216d)
++++ b/src/entity/Administrativo.java	(date 1689637474826)
+@@ -1,2 +1,4 @@
+-package entity;public class Administrativo {
++package entity;
++
++public class Administrativo {
+ }
+Index: src/entity/Profesional.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package entity;public class Profesional {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/Profesional.java b/src/entity/Profesional.java
+--- a/src/entity/Profesional.java	(revision 1e6d11f1abe76a2b9a88fd16e4950a8d8490216d)
++++ b/src/entity/Profesional.java	(date 1689640136669)
+@@ -1,2 +1,52 @@
+-package entity;public class Profesional {
++package entity;
++
++import java.time.LocalDate;
++
++public class Profesional extends Usuario{
++    private String titulo;
++    private LocalDate fechaIngreso;
++
++    public Profesional() {
++    }
++
++    public Profesional(int idUsuario, String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario, String titulo, LocalDate fechaIngreso) {
++        super(idUsuario, nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);
++        this.titulo = titulo;
++        this.fechaIngreso = fechaIngreso;
++    }
++
++    public String getTitulo() {
++        return titulo;
++    }
++
++    public void setTitulo(String titulo) {
++        this.titulo = titulo;
++    }
++
++    public LocalDate getFechaIngreso() {
++        return fechaIngreso;
++    }
++
++    @Override
++    public String toString() {
++        return "Profesional{" +
++                "titulo='" + titulo + '\'' +
++                ", fechaIngreso=" + fechaIngreso +
++                "} " + super.toString();
++    }
++
++    public void setFechaIngreso(LocalDate fechaIngreso) {
++        this.fechaIngreso = fechaIngreso;
++    }
++
++    @Override
++    public String analizarUsuario() {
++
++        String impresion = super.analizarUsuario()
++                + "mi título es "
++                + getTitulo()
++                +" e ingresé a la empresa el "
++                + getFechaIngreso();
++        return impresion;
++    }
+ }
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello world!\");\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 1e6d11f1abe76a2b9a88fd16e4950a8d8490216d)
++++ b/src/Main.java	(date 1689639944763)
+@@ -1,5 +1,24 @@
++import entity.Profesional;
++
++import java.time.LocalDate;
++
+ public class Main {
+     public static void main(String[] args) {
+-        System.out.println("Hello world!");
++
++        Profesional prof1 = new Profesional(1,
++                            "Marcos",
++                            "Hanson",
++                            "Comas",
++                            LocalDate.of(1989, 8, 27),
++                            12123123,
++                            2,
++                            "Adviser de los dioses",
++                            LocalDate.of(2011, 4,12));
++
++        System.out.println(
++                prof1.analizarUsuario()
++        );
++
+     }
++
+ }
+\ No newline at end of file
+Index: src/entity/Cliente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package entity;public class Cliente {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/Cliente.java b/src/entity/Cliente.java
+--- a/src/entity/Cliente.java	(revision 1e6d11f1abe76a2b9a88fd16e4950a8d8490216d)
++++ b/src/entity/Cliente.java	(date 1689637474830)
+@@ -1,2 +1,4 @@
+-package entity;public class Cliente {
++package entity;
++
++public class Cliente {
+ }
+Index: src/interfaces/IUsuario.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package interfaces;public interface IUsuario {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/interfaces/IUsuario.java b/src/interfaces/IUsuario.java
+--- a/src/interfaces/IUsuario.java	(revision 1e6d11f1abe76a2b9a88fd16e4950a8d8490216d)
++++ b/src/interfaces/IUsuario.java	(date 1689638831862)
+@@ -1,2 +1,5 @@
+-package interfaces;public interface IUsuario {
++package interfaces;
++
++public interface IUsuario {
++    public String analizarUsuario();
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"75447063-4d7e-4b18-857d-51a2f4f1d2b6\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2SikdR5iKR1hnmR0jymbSwetrec\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"75447063-4d7e-4b18-857d-51a2f4f1d2b6\" name=\"Changes\" comment=\"\" />\n      <created>1689636876454</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1689636876454</updated>\n    </task>\n    <servers />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1e6d11f1abe76a2b9a88fd16e4950a8d8490216d)
++++ b/.idea/workspace.xml	(date 1689640871764)
+@@ -1,12 +1,34 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="75447063-4d7e-4b18-857d-51a2f4f1d2b6" name="Changes" comment="" />
++    <list default="true" id="75447063-4d7e-4b18-857d-51a2f4f1d2b6" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/entity/Administrativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Administrativo.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Cliente.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/entity/Profesional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Profesional.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Usuario.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/interfaces/IUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/IUsuario.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++        <option value="Interface" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
+   <component name="ProjectId" id="2SikdR5iKR1hnmR0jymbSwetrec" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -18,6 +40,12 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "main",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
+@@ -29,7 +57,22 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1689636876454</updated>
++      <workItem from="1689636877564" duration="3983000" />
+     </task>
+     <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
