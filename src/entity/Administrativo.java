@@ -1,5 +1,7 @@
 package entity;
 
+import java.time.LocalDate;
+
 public class Administrativo extends Usuario{
     private String area;
     private String experienciaPrevia;
@@ -7,10 +9,8 @@ public class Administrativo extends Usuario{
     public Administrativo() {
     }
 
-    public Administrativo(
-            /*String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario,*/
-            String area, String experienciaPrevia) {
-        /*super(nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);*/
+    public Administrativo(int idUsuario, String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario, String area, String experienciaPrevia) {
+        super(idUsuario, nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);
         this.area = area;
         this.experienciaPrevia = experienciaPrevia;
     }
@@ -39,12 +39,10 @@ public class Administrativo extends Usuario{
                 '}';
     }
 
-
     @Override
-    public void AnalizarUsuario() {
-        super.AnalizarUsuario();
-        System.out.println("Área: " + area);
-        System.out.println("Experiencia Previa: " + experienciaPrevia);
+    public String analizarUsuario() {
+        return super.analizarUsuario()
+                +"Mi Área es: "+getArea()+"\n"
+                +"Y tengo es: "+getExperienciaPrevia()+" de Experiencia.";
     }
-
 }
