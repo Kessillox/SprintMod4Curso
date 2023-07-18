@@ -4,4 +4,5 @@ import entity.Usuario;
 
 public interface IUsuario {
     public String analizarUsuario();
+    //int getRun();
 }

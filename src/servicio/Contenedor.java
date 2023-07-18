@@ -50,6 +50,12 @@ public class Contenedor {
             usuarioRecorridoDeLaLista
             
         }
+        /*for (IUsuario usuarioRecorridoDeLaLista:
+                listaDeUsuarios) {
+            if (usuarioRecorridoDeLaLista.getRun() == run) {
+                listaDeUsuarios.remove(usuarioRecorridoDeLaLista);
+                System.out.println("Usuario " + usuarioRecorridoDeLaLista + " eliminado correctamente.");
+            }*/
     }
     //Métodos Capacitación
     public void almacenarCapacitacion(Capacitacion capacitacion){
