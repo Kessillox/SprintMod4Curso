@@ -66,6 +66,7 @@ public class Cliente extends Usuario{
 
     @Override
     public String analizarUsuario() {
-        return super.analizarUsuario()+getDireccionEmpresa()+getComunaEmpresa();
+        String retorno = super.analizarUsuario()+" mi dirección es "+getDireccionEmpresa()+" "+getComunaEmpresa();
+        return retorno;
     }
 }
