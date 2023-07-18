@@ -1,5 +1,7 @@
 package entity;
 
+import java.time.LocalDate;
+
 public class Cliente extends Usuario{
     private String razonSocial;
     private int rut;
@@ -10,7 +12,8 @@ public class Cliente extends Usuario{
     public Cliente() {
     }
 
-    public Cliente(String razonSocial, int rut, long telefonoRepresenta, String direccionEmpresa, String comunaEmpresa) {
+    public Cliente(int idUsuario, String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario, String razonSocial, int rut, long telefonoRepresenta, String direccionEmpresa, String comunaEmpresa) {
+        super(idUsuario, nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);
         this.razonSocial = razonSocial;
         this.rut = rut;
         this.telefonoRepresenta = telefonoRepresenta;
@@ -61,4 +64,8 @@ public class Cliente extends Usuario{
         System.out.println(" la razon social es "+getRazonSocial()+" el rut es "+getRut()+" la direccopn "+getDireccionEmpresa());
     }
 
+    @Override
+    public String analizarUsuario() {
+        return super.analizarUsuario()+getDireccionEmpresa()+getComunaEmpresa();
+    }
 }
