@@ -5,25 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75447063-4d7e-4b18-857d-51a2f4f1d2b6" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/entity/Administrativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Administrativo.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Revision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Revision.java" afterDir="false" />
+>>>>>>> fee314218ebbee87e5b65dd982cc7295a231b046
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+<<<<<<< HEAD
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+>>>>>>> 25baf0dc9d1078eba1d175fb6d36f328eb4c9fd4
   <component name="ProjectId" id="2SikdR5iKR1hnmR0jymbSwetrec" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fee314218ebbee87e5b65dd982cc7295a231b046
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+<<<<<<< HEAD
+=======
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> 25baf0dc9d1078eba1d175fb6d36f328eb4c9fd4
+>>>>>>> fee314218ebbee87e5b65dd982cc7295a231b046
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -34,9 +72,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689636876454</updated>
+      <workItem from="1689640892386" duration="1184000" />
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -59,5 +99,9 @@
         </entry>
       </map>
     </option>
+=======
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+>>>>>>> fee314218ebbee87e5b65dd982cc7295a231b046
   </component>
 </project>
