@@ -66,7 +66,7 @@ public class Revision {
         public String toString() {
             return "Revision{" +
                     "id=" + id +
-                    ", visitaTerrenoID=" + visitaTerrenoID.getId() +
+                    ", visitaTerrenoID=" + visitaTerrenoID.getIdVisita() +
                     ", tipoRevision='" + tipoRevision + '\'' +
                     ", detalle='" + detalle + '\'' +
                     ", estado=" + estado +
