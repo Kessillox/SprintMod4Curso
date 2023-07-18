@@ -39,12 +39,12 @@ public class Administrativo extends Usuario{
                 '}';
     }
 
-
+    /*
     @Override
     public void AnalizarUsuario() {
         super.AnalizarUsuario();
         System.out.println("Área: " + area);
         System.out.println("Experiencia Previa: " + experienciaPrevia);
-    }
+    }*/
 
 }
