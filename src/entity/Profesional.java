@@ -2,6 +2,11 @@ package entity;
 
 import java.time.LocalDate;
 
+/**
+ * Clase Profesional hereda Usuario
+ * Método Analizar Usuario
+ * @author felipekessibustos
+ */
 public class Profesional extends Usuario{
     private String titulo;
     private LocalDate fechaIngreso;

@@ -3,6 +3,10 @@ package entity;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ *Clase Visita en Terreno
+ * @author CodingClub (alopez)
+ */
 public class VisitaTerreno {
 
     private int idVisita, rutCliente;

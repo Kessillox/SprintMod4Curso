@@ -1,11 +1,13 @@
 package interfaces;
 
-import entity.Usuario;
-
 import java.time.LocalDate;
 
+/**
+ * Interfaz Usuario
+ * Métodos a implementar por los Usuarios
+ */
 public interface IUsuario {
-    public String analizarUsuario();
+    String analizarUsuario();
     String getNombre();
     String getApellido1();
     String getApellido2();

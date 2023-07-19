@@ -1,5 +1,9 @@
 package entity;
 
+/**
+ * Clase Revisión
+ * @author AlfaOmega (Katherine)
+ */
 public class Revision {
         private int id;
         private VisitaTerreno visitaTerrenoID;

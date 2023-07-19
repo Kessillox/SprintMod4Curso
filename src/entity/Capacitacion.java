@@ -4,6 +4,11 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Clase Capacitación
+ * Método mostrarDetalles
+ * @author Rocket Team (Diego)
+ */
 public class Capacitacion {
     private int id;
     private int rutCliente;
@@ -75,6 +80,9 @@ public class Capacitacion {
                 ", Cantidad de asistentes: " + cantAsistentes ;
     }
 
+    /**
+     * Método que formatea la fecha de la capacitación y muestra los detalles por pantalla
+     */
     public void mostrarDetalles(){
         DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm");

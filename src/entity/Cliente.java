@@ -2,6 +2,11 @@ package entity;
 
 import java.time.LocalDate;
 
+/**
+ * Clase cliente
+ * Método heredado Analizar Usuario
+ * @author unknown bytemaster (leonardo)
+ */
 public class Cliente extends Usuario{
     private String razonSocial;
     private int rut;

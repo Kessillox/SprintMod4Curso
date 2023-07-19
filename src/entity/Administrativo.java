@@ -2,6 +2,10 @@ package entity;
 
 import java.time.LocalDate;
 
+/**
+ * Clase Administrativo
+ * @author Los fugados Malvekexxx
+ */
 public class Administrativo extends Usuario{
     private String area;
     private int experienciaPrevia;
