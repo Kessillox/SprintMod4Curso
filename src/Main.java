@@ -64,13 +64,79 @@ public class Main {
             System.out.println("*                Digite 2 para salir.            *");
             System.out.println("**************************************************");
             System.out.print("Su opcion: ");
+
             while (!scanner.hasNextInt()) {
                 System.out.println("Opción inválida. Por favor, ingrese un número.");
                 System.out.print("Su opcion: ");
                 scanner.next();
             }
             menu = scanner.nextInt();
+            if (menu == 1){
+                int opcion;
+                do {
+                    System.out.println("\u001B[37;40;1m"+"========= MENÚ PRINCIPAL ========="+"\u001B[0m");
+                    System.out.println("\u001B[32m"+"1. Nuevo Cliente"+"\u001B[0m");
+                    System.out.println("\u001B[33m"+"2. Nuevo Profesional"+"\u001B[0m");
+                    System.out.println("\u001B[34m"+"3. Nuevo Administrativo"+"\u001B[0m");
+                    System.out.println("\u001B[32m"+"4. Eliminar Usuario"+"\u001B[0m");
+                    System.out.println("\u001B[33m"+"5. Listar Usuario"+"\u001B[0m");
+                    System.out.println("\u001B[34m"+"6. Listar Usuarios por tipo"+"\u001B[0m");
+                    System.out.println("\u001B[32m"+"7. Nueva Capacitación"+"\u001B[0m");
+                    System.out.println("\u001B[33m"+"8. Listar Capacitación"+"\u001B[0m");
+                    System.out.println("\u001B[31m"+"9. Menu de bienvenida"+"\u001B[0m");
+                    System.out.print("\u001B[37;40;1m"+"Elige una opción: "+"\u001B[0m");
+                    opcion = scanner.nextInt();
+                    switch (opcion) {
+                        case 1:
+                            System.out.println("===== " + "\u001B[36m" + "CREAR CLIENTE" + "\u001B[0m" + " ====="); // Agrega color cyan al texto "CREAR CLIENTE"
+                            System.out.print("Ingrese la razón social: ");
+                            // Resto del código para leer los datos del cliente y agregarlos al contenedor
+                            break;
+                        case 2:
+                            System.out.println("Seleccionaste la opción 2");
+                            // Resto del código para la opción 2
+                            break;
+                        case 3:
+                            System.out.println("Seleccionaste la opción 3");
+                            // Resto del código para la opción 3
+                            break;
+                        case 4:
+                            System.out.println("Seleccionaste la opción 4");
+                            // Resto del código para la opción 4
+                            break;
+                        case 5:
+                            System.out.println("Seleccionaste la opción 5");
+                            // Resto del código para la opción 5
+                            break;
+                        case 6:
+                            System.out.println("Seleccionaste la opción 6");
+                            // Resto del código para la opción 6
+                            break;
+                        case 7:
+                            System.out.println("Seleccionaste la opción 7");
+                            // Resto del código para la opción 7
+                            break;
+                        case 8:
+                            System.out.println("Seleccionaste la opción 8");
+                            // Resto del código para la opción 8
+                            break;
+                        case 9:
+                            System.out.println("\u001B[31m" + "Saliendo del programa..." + "\u001B[0m"); // Agrega color rojo al texto "Saliendo del programa..."
+                            break;
+                        default:
+                            System.out.println("Opción inválida. Por favor, selecciona una opción válida.");
+                            break;
+                    }
+                } while (opcion != 9);
+
+
+
+            };
+
+
+
         }while (menu !=2);
+        scanner.close();
 
 
 
