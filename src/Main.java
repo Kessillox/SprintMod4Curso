@@ -1,15 +1,21 @@
 import entity.Administrativo;
+import entity.Capacitacion;
 import entity.Cliente;
 import entity.Profesional;
 import servicio.Contenedor;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
 
+        Contenedor contenedor = new Contenedor();
         Scanner scanner = new Scanner(System.in);
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         int menu=0;
         String div= "*************************************************";
         Profesional prof1 = new Profesional(1,
@@ -114,11 +120,38 @@ public class Main {
                             break;
                         case 7:
                             System.out.println("Seleccionaste la opción 7");
-                            // Resto del código para la opción 7
+
+                            System.out.println("Ingrese ID de capacitación");
+                            int idCapacitacion = scanner.nextInt();
+
+                            System.out.println("Ingrese Rut empresa");
+                            int rutEmpresa = scanner.nextInt();
+
+                            System.out.print("Ingrese dia de capacitacion[dd. MM. yyyy]: ");
+                            String fechaCapacitacion = scanner.nextLine();
+                            LocalDate fechaCapacitacionFinal = LocalDate.parse(fechaCapacitacion, formato);
+
+                            System.out.print("Ingrese Hora [HH. MM. ss]: ");
+                            String horaCapacitacion = scanner.nextLine();
+                            LocalTime horaCapacitacionA = LocalTime.parse(horaCapacitacion);
+
+                            System.out.print("Ingrese Lugar: ");
+                            String lugar  = scanner.nextLine();
+
+                            System.out.print("Ingrese duracion: ");
+                            int duracion = scanner.nextInt();
+
+                            System.out.print("Ingrese asistentes: ");
+                            int asistentes = scanner.nextInt();
+
+                            Capacitacion guardaC = new Capacitacion(idCapacitacion,rutEmpresa,fechaCapacitacionFinal,horaCapacitacionA,lugar,duracion,asistentes);
+                            contenedor.almacenarCapacitacion(guardaC);
+
                             break;
                         case 8:
-                            System.out.println("Seleccionaste la opción 8");
-                            // Resto del código para la opción 8
+                            System.out.println("Seleccionaste la opción 8: Listar Capacitación");
+                            contenedor.listarCapacitaciones();
+
                             break;
                         case 9:
                             System.out.println("\u001B[31m" + "Saliendo del programa..." + "\u001B[0m"); // Agrega color rojo al texto "Saliendo del programa..."
