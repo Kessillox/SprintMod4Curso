@@ -4,6 +4,10 @@ import interfaces.IUsuario;
 
 import java.time.LocalDate;
 
+/**
+ * Clase Usuario
+ * @author MHC
+ */
 public class Usuario implements IUsuario {
     private int idUsuario;
     private String nombre;
@@ -114,4 +118,5 @@ public class Usuario implements IUsuario {
                 +getRun()+
                 " ";
     }
+
 }

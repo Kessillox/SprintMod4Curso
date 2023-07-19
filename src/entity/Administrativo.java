@@ -1,16 +1,20 @@
 package entity;
 
+import java.time.LocalDate;
+
+/**
+ * Clase Administrativo
+ * @author Los fugados Malvekexxx
+ */
 public class Administrativo extends Usuario{
     private String area;
-    private String experienciaPrevia;
+    private int experienciaPrevia;
 
     public Administrativo() {
     }
 
-    public Administrativo(
-            /*String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario,*/
-            String area, String experienciaPrevia) {
-        /*super(nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);*/
+    public Administrativo(int idUsuario, String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario, String area, int experienciaPrevia) {
+        super(idUsuario, nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);
         this.area = area;
         this.experienciaPrevia = experienciaPrevia;
     }
@@ -23,11 +27,11 @@ public class Administrativo extends Usuario{
         this.area = area;
     }
 
-    public String getExperienciaPrevia() {
+    public int getExperienciaPrevia() {
         return experienciaPrevia;
     }
 
-    public void setExperienciaPrevia(String experienciaPrevia) {
+    public void setExperienciaPrevia(int experienciaPrevia) {
         this.experienciaPrevia = experienciaPrevia;
     }
 
@@ -39,12 +43,10 @@ public class Administrativo extends Usuario{
                 '}';
     }
 
-
     @Override
-    public void AnalizarUsuario() {
-        super.AnalizarUsuario();
-        System.out.println("Área: " + area);
-        System.out.println("Experiencia Previa: " + experienciaPrevia);
+    public String analizarUsuario() {
+        return super.analizarUsuario()
+                +"Mi Área es: "+getArea()+"\n"
+                +"Y tengo es: "+getExperienciaPrevia()+" años de Experiencia.";
     }
-
 }

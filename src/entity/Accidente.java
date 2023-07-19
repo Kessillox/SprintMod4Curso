@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Clase Accidente
+ * @author Grupo Ada (JDLS)
+ */
 public class Accidente {
     public int idAccidente;
     public int rutCliente;
@@ -43,6 +47,7 @@ public class Accidente {
     }
 
     public String getFechaAccidente() {
+        //fecha recibe el parametro "formato" para dar formato a datos del tipo LocalDate
         return fechaAccidente.format(formato);
     }
 
@@ -82,6 +87,10 @@ public class Accidente {
         this.consecuenciaAccidente = consecuenciaAccidente;
     }
 
+    /**
+     * Formato dd/MM/yyyy para la fecha del accidente
+     */
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     @Override
     public String toString() {
         return "Accidente{" +
@@ -94,5 +103,6 @@ public class Accidente {
                 ", consecuencia='" + consecuenciaAccidente + '\'' +
                 '}';
     }
-    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+
 }
